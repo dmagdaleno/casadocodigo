@@ -1,3 +1,8 @@
+# intelij files
+.idea/
+casadocodigo.iml
+
+
 .metadata
 .classpath
 .project
