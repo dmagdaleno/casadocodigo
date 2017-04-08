@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import org.springframework.transaction.annotation.Transactional;
 
 @Entity
-@Transactional
 public class Produto {
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
