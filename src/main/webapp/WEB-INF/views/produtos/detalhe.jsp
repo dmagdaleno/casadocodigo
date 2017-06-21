@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +50,7 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="/carrinho" rel="nofollow">Carrinho</a></li>
+						<li><a href="/carrinho" rel="nofollow">Carrinho (${carrinhoCompras.quantidade})</a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 
@@ -96,16 +98,16 @@
 	
 	  
 	  <section class="buy-options clearfix">  
-	  <form action="/carrinnho/add" method="post" class="container">
-    	<input type="hidden" value="${produto.id}" value="produtoId" />
+	  <form action='<c:url value="/carrinho/add" />' method="post" class="container">
+    	<input type="hidden" name="produtoId" value="${produto.id}" />
 	    <ul id="variants" class="clearfix">
 	    	<c:forEach items="${produto.precos}" var="preco">
 	    	  <li class="buy-option">
-	            <input type="radio" name="id" class="variant-radio" id="" value="9720393823"  checked="checked"  />
+	            <input type="radio" name="tipo" class="variant-radio" id="tipo" value="${preco.tipo}"  checked="checked"  />
 	            <label  class="variant-label">
 	              ${preco.tipo}
 	            </label>
-	            <small class="compare-at-price">${preco.valor}</small>
+	            <small class="compare-at-price">50,00</small>
 	            <p class="variant-price">${preco.valor}</p>
 	          </li>
 	    	</c:forEach>           
@@ -127,7 +129,9 @@
 	    <h2 class="section-title">Dados do livro:</h2>
 	    <p>Número de páginas: <span>${produto.paginas}</span></p>
 	    <p></p>
-	    <p>Data de publicação: ${produto.dataLancamento} </p>
+	    <p>Data de publicação:<span class="publishedAt"> 
+	    	<fmt:formatDate pattern="dd/MM/yyyy" value="${produto.dataLancamento.time}" /> 
+	    </span></p>
 	    <p>Encontrou um erro? <a href='/submissao-errata' target='_blank'>Submeta uma errata</a></p>
 	  </section>
 	</div>
@@ -136,9 +140,6 @@
 
 	<footer id="layout-footer">
 		<div class="clearfix container">
-
-
-
 
 			<div id="collections-footer">
 				<!-- cdc-footer -->
