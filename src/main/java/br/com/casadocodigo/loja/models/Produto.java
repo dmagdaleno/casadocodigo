@@ -29,6 +29,11 @@ public class Produto {
 	private List<Preco> precos;
 	
 	private String sumarioPath;
+	
+	public Produto(Integer id) {
+		this.id = id; 
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -98,6 +103,7 @@ public class Produto {
 			return false;
 		return true;
 	}
+	
 	public BigDecimal precoPara(TipoPreco tipoPreco) {
 		return precos.stream().filter(preco -> preco.getTipo().equals(tipoPreco)).findFirst().get().getValor();
 	}
