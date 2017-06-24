@@ -30,6 +30,9 @@ public class Produto {
 	
 	private String sumarioPath;
 	
+	public Produto() {
+	}
+	
 	public Produto(Integer id) {
 		this.id = id; 
 	}

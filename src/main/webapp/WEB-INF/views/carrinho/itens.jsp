@@ -120,7 +120,7 @@
 			      <tfoot>
 			        <tr>
 			          <td colspan="3">
-			          	<form action="${s:mvcUrl('PC#finalizar()').build()}" method="post" >
+			          	<form action="${s:mvcUrl('PC#finalizar').build()}" method="post" >
 				          	<input type="submit" class="checkout" name="checkout" value="Finalizar compra" />
 			          	</form>
 			          </td>
@@ -139,7 +139,7 @@
 		      </li>          
 		  </ul>
 		  
-		  <h2><a href="http://www.casadocodigo.com.br">Veja todos os livros que publicamos!</a></h2>
+		  <h2><a href="${contextPath}produtos">Veja todos os livros que publicamos!</a></h2>
 		</section> 
 
 		

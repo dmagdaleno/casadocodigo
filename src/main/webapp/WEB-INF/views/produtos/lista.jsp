@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Lista de Produtos</h1>
-	<p>${sucesso}</p>
+	<p>${message}</p>
 	<table>
 		<tr>
 			<th>Título</th>
