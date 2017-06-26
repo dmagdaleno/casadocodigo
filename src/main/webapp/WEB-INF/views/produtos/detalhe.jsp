@@ -62,7 +62,7 @@
 	</header>
 	<nav class="categories-nav">
 		<ul class="container">
-			<li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+			<li class="category"><a href="${contextPath}">Home</a></li>
 			<li class="category"><a href="/collections/livros-de-agile">
 					Agile </a></li>
 			<li class="category"><a href="/collections/livros-de-front-end">
@@ -107,7 +107,7 @@
 	            <label  class="variant-label">
 	              ${preco.tipo}
 	            </label>
-	            <small class="compare-at-price">50,00</small>
+	            <small class="compare-at-price">${preco.valor *(2)}</small>
 	            <p class="variant-price">${preco.valor}</p>
 	          </li>
 	    	</c:forEach>           
