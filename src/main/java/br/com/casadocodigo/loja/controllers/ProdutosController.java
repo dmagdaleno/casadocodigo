@@ -73,5 +73,4 @@ public class ProdutosController {
     	mav.addObject("produto", produto);
     	return mav;
     }
-
 }
