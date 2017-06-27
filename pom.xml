@@ -16,7 +16,7 @@
 	    <maven.compiler.target>1.8</maven.compiler.target>
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  	</properties>
- 	
+	
  	<dependencies>
 	    <dependency>
 	        <groupId>org.springframework</groupId>
@@ -129,16 +129,38 @@
 		    <version>2.5.1</version>
 		</dependency>
 		
+		<!-- Guava Cache -->
 		<dependency>
 		    <groupId>com.google.guava</groupId>
 		    <artifactId>guava</artifactId>
 		    <version>18.0</version>
 		</dependency>
-		
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context-support</artifactId>
 		    <version>4.1.0.RELEASE</version>
+		</dependency>
+		
+		<!-- Spring Security -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		    <version>4.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>4.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		    <version>4.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>4.0.0.RELEASE</version>
 		</dependency>
 		
 	</dependencies>
