@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -44,7 +45,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${contextPath}" id="logo">
 			</a>
 			<div id="header-content">
 				<nav id="main-nav">
@@ -98,7 +99,7 @@
 	
 	  
 	  <section class="buy-options clearfix">  
-	  <form action='<c:url value="/carrinho/add" />' method="post" class="container">
+	  <form:form servletRelativeAction="/carrinho/add" method="post" cssClass="container">
     	<input type="hidden" name="produtoId" value="${produto.id}" />
 	    <ul id="variants" class="clearfix">
 	    	<c:forEach items="${produto.precos}" var="preco">
@@ -107,14 +108,14 @@
 	            <label  class="variant-label">
 	              ${preco.tipo}
 	            </label>
-	            <small class="compare-at-price">${preco.valor *(2)}</small>
-	            <p class="variant-price">${preco.valor}</p>
+	            <small class="compare-at-price"><fmt:formatNumber value = "${preco.valor *(1.2)}" type = "currency"/></small>
+	            <p class="variant-price"><fmt:formatNumber value = "${preco.valor}" type = "currency"/></p>
 	          </li>
 	    	</c:forEach>           
 	    </ul>
 	    <button type="submit" class="submit-image icon-basket-alt" title="Compre Agora ${produto.titulo}"></button>
 	    
-	  </form>
+	  </form:form>
 	  
 	</section>
 	  
