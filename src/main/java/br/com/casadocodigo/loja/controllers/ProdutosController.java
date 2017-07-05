@@ -56,7 +56,16 @@ public class ProdutosController {
         produtoDao.gravar(produto);
         redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso.");
         
-        return new ModelAndView("redirect:produtos");
+        return new ModelAndView("redirect:/produtos");
+    }
+    
+    @RequestMapping(value="/remover", method=RequestMethod.POST)
+    @CacheEvict(value="produtosHome", allEntries=true)
+    public ModelAndView remover(Integer id){
+    	
+    	produtoDao.remover(id);
+    	
+    	return new ModelAndView("redirect:/produtos");
     }
     
     @RequestMapping(method=RequestMethod.GET)
