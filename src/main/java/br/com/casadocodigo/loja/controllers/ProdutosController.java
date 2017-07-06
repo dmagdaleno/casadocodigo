@@ -64,7 +64,6 @@ public class ProdutosController {
     public ModelAndView remover(Integer id){
     	
     	produtoDao.remover(id);
-    	
     	return new ModelAndView("redirect:/produtos");
     }
     

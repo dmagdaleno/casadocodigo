@@ -8,4 +8,4 @@ Curso da Alura
 
 - Spring MVC I: Criando aplicações web [14/14]
 
-- Spring MVC II: Integração, cache, segurança e templates [7/9]
+- Spring MVC II: Integração, cache, segurança e templates [8/9]
