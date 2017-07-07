@@ -8,4 +8,8 @@ Curso da Alura
 
 - Spring MVC I: Criando aplicações web [14/14]
 
-- Spring MVC II: Integração, cache, segurança e templates [8/9]
+- Spring MVC II: Integração, cache, segurança e templates [9/9]
+
+**Heroku**
+
+https://springmvc-cdc-loja.herokuapp.com/ | https://git.heroku.com/springmvc-cdc-loja.git
